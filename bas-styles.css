@@ -108,14 +108,18 @@ option[value="0"] {
 .inline {
             width: unset;
             }
-
+        }
 .genre-container {
-            display: flex;
-        }
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns by default */
+  gap: 10px;
+}
 
-.genre-column {
-            width: 48%;
-        }
+@media (max-width: 600px) {
+  .genre-container {
+    grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+  }
+}
 
 input[name="genre_other"] {
             width: unset;
