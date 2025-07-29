@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+ <div id="intro-modal" class="modal">
+  <div class="modal-content">
+    <h2>🎵 welcome to <strong>Song Wizard</strong>!</h2>
+    <p>answer a few fun questions and i’ll create a custom song just for u</p>
+    <button onclick="closeModal()">let’s gooo!</button>
+  </div>
+</div>
+
 <head>
     <title>Magic Personalized Song Generator</title>
     <meta charset="utf-8">
@@ -8,11 +16,13 @@
 </head>
 <body>
   <header>
+    <div  class="title-container">
     <h1 id="title">
       <strong>Song Wizard 🧙‍♂️🎶</strong>
     </h1>
-    <p id="description-1">answer the following questions, and i’ll craft a custom track that’s all about u</p>
-    <p id="description-2">(dont worry i wont sell ur info)</p>
+    <p class="description" id="description-1">answer the following questions, and i’ll craft a custom track that’s all about u</p>
+    <p class="description" id="description-2">(dont worry i wont sell ur info)</p>
+  </div class="title-container">
   </header>
   <form id="survey-form" method="get" action="https://cdn.mtdv.me/video/rick.mp4?age=26&genre=hiphop&genre=acoustic&genre=indie&genre_other=&lyrics=on">
   
@@ -23,19 +33,17 @@
         <label id="name-label" for="name">
           Name <input id="name" class="form-control" type="text" required placeholder="ur beautiful name hon">
         </label>
-        <label id="email-label" for="email">
-          Email <input id="email" class="form-control" type="email" placeholder="drop the @" required>
-        </label>
+        
         <label id="age-label" for="age">
-          Age <input id="age" class="form-control" type="number" name="age" placeholder="how many trips ‘round the sun?" min="1" max="120">
+          Age <input id="age" class="form-control" type="number" required name="age" placeholder="how many trips ‘round the sun?" min="1" max="120">
     
         </label>
         <label id="location-label" for="location">
-          Location <input id="location" class="form-control" type="text" placeholder="where u located? (city, country, ur childhood trauma… jk. kinda.)">
+          Location <input id="location" class="form-control" required type="text" placeholder="where u located? (city, country, ur childhood trauma… jk. kinda.)">
         </label>
         <label for="dropdown"> 
           Gender
-          <select id="dropdown">
+          <select required id="dropdown">
             <option value="0">(select one)</option>
             <option class="real-option" value="1"> Male 🙋‍♂️</option>
             <option class="real-option" value="2"> Female 🙋‍♀️</option>
@@ -52,19 +60,19 @@
     <legend><strong>Ur vibe & taste</strong></legend>
         <div class="vibe">
             <label for="q1">
-          What’s ur vibe today? Chill, hype, or feelin’ some type of way? 🤔 <input id="q1" class="form-control" type="text" placeholder="just vibe it out" required>
+          What’s ur vibe today? Chill, hype, or feelin’ some type of way? 🤔 <input required id="q1" class="form-control" type="text" placeholder="just vibe it out" required>
             </label>
             <label for="q2">
-          If ur life had a theme song, what song plays when u’re just being urself? 🎬 <input id="q2" class="form-control" type="text" placeholder="ur anthem, no rules" required>
+          If ur life had a theme song, what song plays when u’re just being urself? 🎬 <input required id="q2" class="form-control" type="text" placeholder="ur anthem, no rules" required>
             </label>
             <label for="q3">
-          What's 1 thing u’re lowkey thankful for rn? Could be big or small, no judg 🙏 <input id="q3" class="form-control" type="text" placeholder="gratitude check" required>
+          What's 1 thing u’re lowkey thankful for rn? Could be big or small, no judg 🙏 <input required id="q3" class="form-control" type="text" placeholder="gratitude check" required>
             </label>
             <label for="q4">
-          Got a quote or lyric that hits diff for u? Like, the one u always come back to 💬 <input id="q4" class="form-control" type="text" placeholder="that one quote or lyric" required>
+          Got a quote or lyric that hits diff for u? Like, the one u always come back to 💬 <input required id="q4" class="form-control" type="text" placeholder="that one quote or lyric" required>
             </label>
             <label for="q5">
-          What’s something u wanna say but haven’t yet? 🫣 <input id="q5" class="form-control" type="text" placeholder="no filter, just say it" required>
+          What’s something u wanna say but haven’t yet? 🫣 <input required id="q5" class="form-control" type="text" placeholder="no filter, just say it" required>
             </label>
         </div>
         <br>
@@ -111,6 +119,12 @@
   </fieldset>
   <input type="submit" id="submit"> 
   </form>
+
+   <script>
+  function closeModal() {
+    document.getElementById("intro-modal").style.display = "none";
+  }
+</script>
 </body>
 <footer>
   <p class="footer">Made with ❤️ by pđ</p>
