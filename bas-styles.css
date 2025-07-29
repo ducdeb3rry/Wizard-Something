@@ -1,121 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Magic Personalized Song Generator</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="bas-styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-  <header>
-    <div  class="title-container">
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #AAB99AEE;
+  color: #F0F0D7;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  background-image: linear-gradient(
+      90deg,
+      rgba(208, 221, 208, 0.8),
+      rgba(170, 185, 154,0.7)
+    ),
+    url(https://images.pexels.com/photos/767956/pexels-photo-767956.jpeg);
+  background-size: 300%;
+  background-repeat: repeat;
+  background-position: top top;
+}
+header {
+    text-align: center;
+    justify-content: center !important;
+    padding: 1rem;
+    margin-bottom: 4px;
+    }
+h1 {
+        margin: 0;
+        justify-content: center;
+        font-size: 2rem;
+        padding: 1rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        line-height: 1.2;
+    }
+p[class="description"] {
+        margin: 0 auto;
+        font-size: 1rem;
+        width: 90vw;
+        font-style: italic;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        
+    }
 
-    <h1 id="title">
-      <strong>Song Wizard 🧙‍♂️🎶</strong>
-    </h1>
-    <p id="description-1">answer the following questions, and i’ll craft a custom track that’s all about u</p>
-    <p id="description-2">(dont worry i wont sell ur info)</p>
-  </div class="title-container">
-  </header>
-  <form id="survey-form" method="get" action="https://cdn.mtdv.me/video/rick.mp4?age=26&genre=hiphop&genre=acoustic&genre=indie&genre_other=&lyrics=on">
-  
-  <div class="form-container">
-  <fieldset>
-     <legend><strong>Who tf r u?</strong></legend>
-     <div class="personal-info">
-        <label id="name-label" for="name">
-          Name <input id="name" class="form-control" type="text" required placeholder="ur beautiful name hon">
-        </label>
-        <label id="email-label" for="email">
-          Email <input id="email" class="form-control" type="email" placeholder="drop the @" required>
-        </label>
-        <label id="age-label" for="age">
-          Age <input id="age" class="form-control" type="number" name="age" placeholder="how many trips ‘round the sun?" min="1" max="120">
+/* Form */
+form {
+    width: 700px;
+    margin: auto auto;
+    margin-bottom: 100px;
+    padding: 2.5rem;
+    padding-bottom: 20px;
+    background: rgb(114, 125, 115);
+    border-radius: 1em;
+    }
+fieldset {
+    border: none;
+    padding-bottom: 1rem;
+        }
+legend {
+        text-align: center;
+        font-size: 1.75em;
+        }
+label, select {
+          display:block;
     
-        </label>
-        <label id="location-label" for="location">
-          Location <input id="location" class="form-control" type="text" placeholder="where u located? (city, country, ur childhood trauma… jk. kinda.)">
-        </label>
-        <label for="dropdown"> 
-          Gender
-          <select id="dropdown">
-            <option value="0">(select one)</option>
-            <option class="real-option" value="1"> Male 🙋‍♂️</option>
-            <option class="real-option" value="2"> Female 🙋‍♀️</option>
-            <option class="real-option" value="3"> Non-binary 🧑</option>
-            <option class="real-option" value="4"> Genderfluid 🌊</option>
-            <option class="real-option" value="5"> Other 🌀</option>
-            <option class="real-option" value="6"> Prefer not to say 🤫</option>
-          </select>
-        </label>
-    </div>
-  </fieldset>
-  <br>
-  <fieldset>
-    <legend><strong>Ur vibe & taste</strong></legend>
-        <div class="vibe">
-            <label for="q1">
-          What’s ur vibe today? Chill, hype, or feelin’ some type of way? 🤔 <input id="q1" class="form-control" type="text" placeholder="just vibe it out" required>
-            </label>
-            <label for="q2">
-          If ur life had a theme song, what song plays when u’re just being urself? 🎬 <input id="q2" class="form-control" type="text" placeholder="ur anthem, no rules" required>
-            </label>
-            <label for="q3">
-          What's 1 thing u’re lowkey thankful for rn? Could be big or small, no judg 🙏 <input id="q3" class="form-control" type="text" placeholder="gratitude check" required>
-            </label>
-            <label for="q4">
-          Got a quote or lyric that hits diff for u? Like, the one u always come back to 💬 <input id="q4" class="form-control" type="text" placeholder="that one quote or lyric" required>
-            </label>
-            <label for="q5">
-          What’s something u wanna say but haven’t yet? 🫣 <input id="q5" class="form-control" type="text" placeholder="no filter, just say it" required>
-            </label>
-        </div>
-        <br>
-        <div class="genre">
-            <label>
-                Pick a genre (or 3 if u're feeling spicy)
-            </label>
-            <div class="genre-container">
-             <!-- Left column -->
-             <div class="genre-column">
-                <label><input class="inline" type="checkbox" name="genre" value="pop"> Pop 🍭</label>
-                <label><input class="inline" type="checkbox" name="genre" value="hiphop"> Hip-Hop / Rap 🎤</label>
-                <label><input class="inline" type="checkbox" name="genre" value="rnb"> R&B 💋</label>
-                <label><input class="inline" type="checkbox" name="genre" value="acoustic"> Acoustic ☕</label>
-                <label><input class="inline" type="checkbox" name="genre" value="rock"> Rock 🎸</label>
-                <label><input class="inline" type="checkbox" name="genre" value="indie"> Indie 🌻</label>
-                <label><input class="inline" type="checkbox" name="genre" value="edm"> EDM / Dance 💃</label>
-                <label><input class="inline" type="checkbox" name="genre" value="country"> Country 🤠</label>
-                <label><input class="inline" type="checkbox" name="genre" value="jazz"> Jazz 🎷</label>
-                <label><input class="inline" type="checkbox" name="genre" value="lofi"> Lofi 🧠</label>
-            </div>
-             <!-- Right column -->
-            <div class="genre-columnl">
-                <label><input class="inline" type="checkbox" name="genre" value="kpop"> K-pop ✨</label>
-                <label><input class="inline" type="checkbox" name="genre" value="sadpiano"> Sad piano in the rain ☔</label>
-                <label><input class="inline" type="checkbox" name="genre" value="meme"> Meme music / Weirdcore 🐸</label>
-                <label><input class="inline" type="checkbox" name="genre" value="classical"> Classical 🎻</label>
-                <label><input class="inline" type="checkbox" name="genre" value="blues"> Blues 🎸</label>
-                <label><input class="inline" type="checkbox" name="genre" value="folk"> Folk 🌿</label>
-                <label><input class="inline" type="checkbox" name="genre" value="metal"> Metal 🤘</label>
-                <label><input class="inline" type="checkbox" name="genre" value="reggae"> Reggae 🌴</label>
-                <label><input class="inline" type="checkbox" name="genre" value="latin"> Latin 🎶</label>
-                <label><input class="inline" type="checkbox" name="genre" value="other"> Other:<input type="text" name="genre_other" placeholder="Type your genre..."></label>
-            </div>
-            </div>
-        </div>
-        <br>
-        <div class="lyrics">
-            <label>Do u want lyrics or just a vibe?</label>
-                <label><input type="radio" class="inline" name="lyrics" checked="">Full lyrics 🎤</label>
-                <label><input type="radio" class="inline" name="lyrics" checked="">Instrumental only 🎧</label>
-                <label><input type="radio" class="inline" name="lyrics" checked="">Half and half (mysterious and artsy) 🌒</label>
-        </div>
-  </fieldset>
-  <input type="submit" id="submit"> 
-  </form>
-</body>
-<footer>
-  <p class="footer">Made with ❤️ by pđ</p>
-</footer>    
-</html>
+            }
+.form-control {
+            display: block;
+            width: 98.7%;
+            height: 2rem;
+            font-size: 0.9rem;
+            padding-left: 0.4rem;
+            color: black;
+            border-radius: 5px;
+            border-color: #777777;
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 0.5rem;
+            border-width: 2px;
+            border-style: solid;
+}
+
+.form-control::placeholder {
+  color: #777777;
+  opacity: 1; /* Firefox */
+}
+select {
+                height: 2.36rem;
+                width: 100.47%;
+                font-size: 0.9rem;
+                padding-left: 0.3reml;
+                color: black;
+                border-radius: 5px;
+                border-color: #777777;
+                border-width: 2px;
+                border-style: solid;
+                
+                
+            }
+option[value="0"] {
+                display: none;
+            }
+.real-option {
+            color:black;
+            }
+
+.inline {
+            width: unset;
+            }
+
+.genre-container {
+            display: flex;
+        }
+
+.genre-column {
+            width: 48%;
+        }
+
+input[name="genre_other"] {
+            width: unset;
+            margin-left: 5px;
+        }
+input[type="submit"] {
+            margin:auto;
+            margin-top: 20px;
+            width: 100%;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            color: #F0F0D7;
+            background-color: #AAB99AEE;
+            border-radius: 5px;
+            border-style: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-image: linear-gradient(
+      90deg,
+      rgba(208, 221, 208, 0.8),
+      rgba(170, 185, 154,0.7)
+    ),
+    url(https://images.pexels.com/photos/767956/pexels-photo-767956.jpeg)
+        }
+.footer {
+    text-align: center;
+    margin-top: 1.2rem;
+    width:auto;
+}
+.title-container {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 90vw;
+    padding: 1rem;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #AAB99AEE;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content p {
+  font-size: 2rem;
+  margin: 0 0 20px;
+  color: #F0F0D7; 
+  text-align: center;
+  justify-content: center;
+}
+.modal-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: #F0F0D7;
+}
+
+.modal-content button {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #727D73;
+  color: #F0F0D7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #3d423e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
