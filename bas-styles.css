@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #AAB99AEE;
+  color: #F0F0D7;
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  background-image: linear-gradient(
+      90deg,
+      rgba(208, 221, 208, 0.8),
+      rgba(170, 185, 154,0.7)
+    ),
+    url(https://images.pexels.com/photos/767956/pexels-photo-767956.jpeg);
+  background-size: 300%;
+  background-repeat: repeat;
+  background-position: top top;
+}
+header {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 4px;
+    }
+h1 {
+        margin: 0 0;
+        font-size: 32px;
+        padding: 1rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        line-height: 1.2;
+    }
+p {
+        margin: 0 auto;
+        font-size: 16px;
+        width: 600px;
+        font-style: italic;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        
+    }
+
+/* Form */
+form {
+    width: 700px;
+    margin: auto auto;
+    margin-bottom: 100px;
+    padding: 2.5rem;
+    padding-bottom: 20px;
+    background: rgb(114, 125, 115);
+    border-radius: 1em;
+    }
+fieldset {
+    border: none;
+    padding-bottom: 1rem;
+        }
+legend {
+        text-align: center;
+        font-size: 1.75em;
+        }
+label, select {
+          display:block;
+    
+            }
+.form-control {
+            display: block;
+            width: 98.7%;
+            height: 2rem;
+            font-size: 0.9rem;
+            padding-left: 0.4rem;
+            color: black;
+            border-radius: 5px;
+            border-color: #777777;
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 0.5rem;
+            border-width: 2px;
+            border-style: solid;
+}
+
+.form-control::placeholder {
+  color: #777777;
+  opacity: 1; /* Firefox */
+}
+select {
+                height: 2.36rem;
+                width: 100.47%;
+                font-size: 0.9rem;
+                padding-left: 0.3reml;
+                color: black;
+                border-radius: 5px;
+                border-color: #777777;
+                border-width: 2px;
+                border-style: solid;
+                
+                
+            }
+option[value="0"] {
+                display: none;
+            }
+.real-option {
+            color:black;
+            }
+
+.inline {
+            width: unset;
+            }
+
+.genre-container {
+            display: flex;
+        }
+
+.genre-column {
+            width: 48%;
+        }
+
+input[name="genre_other"] {
+            width: unset;
+            margin-left: 5px;
+        }
+input[type="submit"] {
+            margin:auto;
+            margin-top: 20px;
+            width: 100%;
+            height: 2.5rem;
+            font-size: 1.2rem;
+            color: #F0F0D7;
+            background-color: #AAB99AEE;
+            border-radius: 5px;
+            border-style: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-image: linear-gradient(
+      90deg,
+      rgba(208, 221, 208, 0.8),
+      rgba(170, 185, 154,0.7)
+    ),
+    url(https://images.pexels.com/photos/767956/pexels-photo-767956.jpeg)
+        }
+.footer {
+    text-align: end;
+    margin-left: 95px;
+    margin-top: 19px;
+}

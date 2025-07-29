@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Magic Personalized Song Generator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bas-styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header>
+    <h1 id="title">
+      <strong>Song Wizard 🧙‍♂️🎶</strong>
+    </h1>
+    <p id="description-1">answer the following questions, and i’ll craft a custom track that’s all about u</p>
+    <p id="description-2">(dont worry i wont sell ur info)</p>
+  </header>
+  <form id="survey-form" method="get" action="https://cdn.mtdv.me/video/rick.mp4?age=26&genre=hiphop&genre=acoustic&genre=indie&genre_other=&lyrics=on">
+  
+  <div class="form-container">
+  <fieldset>
+     <legend><strong>Who tf r u?</strong></legend>
+     <div class="personal-info">
+        <label id="name-label" for="name">
+          Name <input id="name" class="form-control" type="text" required placeholder="ur beautiful name hon">
+        </label>
+        <label id="email-label" for="email">
+          Email <input id="email" class="form-control" type="email" placeholder="drop the @" required>
+        </label>
+        <label id="age-label" for="age">
+          Age <input id="age" class="form-control" type="number" name="age" placeholder="how many trips ‘round the sun?" min="1" max="120">
+    
+        </label>
+        <label id="location-label" for="location">
+          Location <input id="location" class="form-control" type="text" placeholder="where u located? (city, country, ur childhood trauma… jk. kinda.)">
+        </label>
+        <label for="dropdown"> 
+          Gender
+          <select id="dropdown">
+            <option value="0">(select one)</option>
+            <option class="real-option" value="1"> Male 🙋‍♂️</option>
+            <option class="real-option" value="2"> Female 🙋‍♀️</option>
+            <option class="real-option" value="3"> Non-binary 🧑</option>
+            <option class="real-option" value="4"> Genderfluid 🌊</option>
+            <option class="real-option" value="5"> Other 🌀</option>
+            <option class="real-option" value="6"> Prefer not to say 🤫</option>
+          </select>
+        </label>
+    </div>
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend><strong>Ur vibe & taste</strong></legend>
+        <div class="vibe">
+            <label for="q1">
+          What’s ur vibe today? Chill, hype, or feelin’ some type of way? 🤔 <input id="q1" class="form-control" type="text" placeholder="just vibe it out" required>
+            </label>
+            <label for="q2">
+          If ur life had a theme song, what song plays when u’re just being urself? 🎬 <input id="q2" class="form-control" type="text" placeholder="ur anthem, no rules" required>
+            </label>
+            <label for="q3">
+          What's 1 thing u’re lowkey thankful for rn? Could be big or small, no judg 🙏 <input id="q3" class="form-control" type="text" placeholder="gratitude check" required>
+            </label>
+            <label for="q4">
+          Got a quote or lyric that hits diff for u? Like, the one u always come back to 💬 <input id="q4" class="form-control" type="text" placeholder="that one quote or lyric" required>
+            </label>
+            <label for="q5">
+          What’s something u wanna say but haven’t yet? 🫣 <input id="q5" class="form-control" type="text" placeholder="no filter, just say it" required>
+            </label>
+        </div>
+        <br>
+        <div class="genre">
+            <label>
+                Pick a genre (or 3 if u're feeling spicy)
+            </label>
+            <div class="genre-container">
+             <!-- Left column -->
+             <div class="genre-column">
+                <label><input class="inline" type="checkbox" name="genre" value="pop"> Pop 🍭</label>
+                <label><input class="inline" type="checkbox" name="genre" value="hiphop"> Hip-Hop / Rap 🎤</label>
+                <label><input class="inline" type="checkbox" name="genre" value="rnb"> R&B 💋</label>
+                <label><input class="inline" type="checkbox" name="genre" value="acoustic"> Acoustic ☕</label>
+                <label><input class="inline" type="checkbox" name="genre" value="rock"> Rock 🎸</label>
+                <label><input class="inline" type="checkbox" name="genre" value="indie"> Indie 🌻</label>
+                <label><input class="inline" type="checkbox" name="genre" value="edm"> EDM / Dance 💃</label>
+                <label><input class="inline" type="checkbox" name="genre" value="country"> Country 🤠</label>
+                <label><input class="inline" type="checkbox" name="genre" value="jazz"> Jazz 🎷</label>
+                <label><input class="inline" type="checkbox" name="genre" value="lofi"> Lofi 🧠</label>
+            </div>
+             <!-- Right column -->
+            <div class="genre-columnl">
+                <label><input class="inline" type="checkbox" name="genre" value="kpop"> K-pop ✨</label>
+                <label><input class="inline" type="checkbox" name="genre" value="sadpiano"> Sad piano in the rain ☔</label>
+                <label><input class="inline" type="checkbox" name="genre" value="meme"> Meme music / Weirdcore 🐸</label>
+                <label><input class="inline" type="checkbox" name="genre" value="classical"> Classical 🎻</label>
+                <label><input class="inline" type="checkbox" name="genre" value="blues"> Blues 🎸</label>
+                <label><input class="inline" type="checkbox" name="genre" value="folk"> Folk 🌿</label>
+                <label><input class="inline" type="checkbox" name="genre" value="metal"> Metal 🤘</label>
+                <label><input class="inline" type="checkbox" name="genre" value="reggae"> Reggae 🌴</label>
+                <label><input class="inline" type="checkbox" name="genre" value="latin"> Latin 🎶</label>
+                <label><input class="inline" type="checkbox" name="genre" value="other"> Other:<input type="text" name="genre_other" placeholder="Type your genre..."></label>
+            </div>
+            </div>
+        </div>
+        <br>
+        <div class="lyrics">
+            <label>Do u want lyrics or just a vibe?</label>
+                <label><input type="radio" class="inline" name="lyrics" checked="">Full lyrics 🎤</label>
+                <label><input type="radio" class="inline" name="lyrics" checked="">Instrumental only 🎧</label>
+                <label><input type="radio" class="inline" name="lyrics" checked="">Half and half (mysterious and artsy) 🌒</label>
+        </div>
+  </fieldset>
+  <input type="submit" id="submit"> 
+  </form>
+</body>
+<footer>
+  <p class="footer">Made with ❤️ by pđ</p>
+</footer>    
+</html>
