@@ -141,9 +141,9 @@ input[type="submit"] {
     url(https://images.pexels.com/photos/767956/pexels-photo-767956.jpeg)
         }
 .footer {
-    text-align: end;
-    margin-left: 7vw;
-    margin-top: 0.3rem;
+    text-align: center;
+    margin-top: 1.2rem;
+    width:auto;
 }
 .title-container {
     text-align: center;
@@ -152,7 +152,7 @@ input[type="submit"] {
 
 @media (max-width: 600px) {
   form {
-    width: 95vw;
+    width: 90vw;
     padding: 1rem;
   }
-  
+}
