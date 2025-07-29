@@ -25,7 +25,8 @@ header {
     margin-bottom: 4px;
     }
 h1 {
-        margin: 0 0;
+        margin: auto auto;
+        text-align: center;
         font-size: 32px;
         padding: 1rem;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
